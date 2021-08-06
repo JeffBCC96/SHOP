@@ -1,0 +1,29 @@
+<view class="goods_list">
+    <SearchInput></SearchInput>
+    <Tabs tabs="{{tabs}}" binditemChange="handle_itemChange"></Tabs>
+    
+    <block wx:if="{{tabs[0].isActive}}">
+
+        <view class="container">
+
+            <navigator class="group"
+            wx:for="{{goods_list}}"
+            wx:key="goods_id"
+            url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+                <view class="goods_pic">
+                    <image src="{{item.goods_small_logo?item.goods_small_logo:'https://th.bing.com/th/id/Rf80fccb5feddc9d061d0b7c4012db81c?rik=RB6atamdj7NOVg&riu=http%3a%2f%2fimg.yao51.com%2fjiankangtuku%2fnldkpcgv.jpeg&ehk=5vrlWwjusS0wNdeOmCuZybeIixa0iyZ8SebR9FdRBIo%3d&risl=&pid=ImgRaw'}}" mode="widthFix" ></image>
+                </view>
+
+                <view class="goods_intro">
+                    <view class="title" >{{item.goods_name}}</view>
+                    <view class="price">￥{{item.goods_price}}</view>
+
+                </view>
+
+            </navigator>
+            
+        
+        </view>
+    
+    </block>
+</view>

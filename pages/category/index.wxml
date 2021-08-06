@@ -1,0 +1,54 @@
+<veiw class="cate_page">
+    <veiw class="searchbar">
+        <SearchInput></SearchInput> 
+    </veiw>
+    <veiw class="All_content">
+        <!-- 左边的菜单 -->
+        <scroll-view class="left_menu" scroll-y="{{true}}">
+            <view 
+            class="left_item {{index===currentIndex?'active':''}}"
+            wx:for="{{left_menu}}"
+            wx:key="*this" 
+            bindtap="menu_tap"
+            data-index = "{{index}}"
+            >
+            {{item}}
+            </view>
+           
+        </scroll-view>
+        <!-- 右边的内容 -->
+        <scroll-view scroll-top="{{scroll_top_value}}" scroll-y="{{true}}" class="right_content" >
+            <view class="group" 
+            wx:for="{{right_content}}" 
+            wx:for-item="v1" 
+            wx:for-index="i1" 
+            wx:key="cat_id"
+            >
+                <view class="title">
+                    <text class="delimiter"> / </text>
+                    <text class="title">{{v1.cat_name}}</text>
+                    <text class="delimiter"> / </text>
+                    
+                </view>
+                <view class="list_container">
+                    <navigator 
+                    wx:for="{{v1.children}}"
+                    wx:for-item="v2"
+                    wx:for-index="i2"
+                    wx:key="cat_id"
+                    url="/pages/goods_list/index?cid={{v2.cat_id}}">
+                        <image src="{{v2.cat_icon}}" mode="widthFix" ></image>
+                        <text class="list.text" >{{v2.cat_name}}</text>
+                    </navigator>
+                
+                </view>
+
+                
+            </view>
+
+            
+            
+        </scroll-view>
+    </veiw>
+
+</veiw>

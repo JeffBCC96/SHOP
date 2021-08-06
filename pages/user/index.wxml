@@ -1,0 +1,39 @@
+
+<!-- 需要使用 button 来授权登录
+<button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+<view wx:else>请升级微信版本</view> -->
+
+
+<view class="user_profile">
+
+    <view class="image_wrap">
+       
+        <image src="https://tse1-mm.cn.bing.net/th/id/R-C.d6a63c350c8ea49404a71face8f969b5?rik=6rrFl80Zdda2xA&riu=http%3a%2f%2fup.deskcity.org%2fpic_source%2fd6%2fa6%2f3c%2fd6a63c350c8ea49404a71face8f969b5.jpg&ehk=Oi4bGjrSOzfSvN3RAxMIqEty2Iz46o22rTEO%2bQirydM%3d&risl=&pid=ImgRaw&r=0">
+            
+        </image>
+
+        <view class="user_info">
+
+            <view class="icon">
+                <open-data class="bg_user" type="userAvatarUrl" ></open-data>
+            </view>
+            
+            <open-data class="name" type="userNickName"></open-data>
+        
+        </view>
+
+    </view>
+
+</view> 
+
+
+
+
+<navigator url="/pages/login/index" open-type="navigate">
+    登录
+</navigator>
+
+
+
+
+

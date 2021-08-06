@@ -1,0 +1,7 @@
+<view class="pay">
+
+    <image class="rong_pay" src="../../libs/images/rong.JPG" mode="widthFix">
+        
+    </image>
+
+</view>

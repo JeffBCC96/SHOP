@@ -1,0 +1,46 @@
+view {
+  /* 使用主题颜色 */
+  /* color:var(--themeColor); */
+}
+.index_swiper {
+  width: 750rpx;
+  height: 340rpx;
+}
+.index_swiper image {
+  width: 100%;
+}
+.index_cate {
+  display: flex;
+}
+.index_cate navigator {
+  flex: 4;
+}
+.index_cate navigator image {
+  width: 100%;
+  padding: 0 20rpx;
+}
+.floor_index .floor_group .floor_title {
+  padding: 10rpx 0;
+}
+.floor_index .floor_group .floor_title image {
+  width: 100%;
+}
+.floor_index .floor_group .floorlist {
+  overflow: hidden;
+}
+.floor_index .floor_group .floorlist navigator {
+  float: left;
+  width: 33.33%;
+}
+.floor_index .floor_group .floorlist navigator:nth-last-child(-n+4) {
+  height: 27.72711207vw;
+  border-left: 10rpx solid #fff;
+}
+.floor_index .floor_group .floorlist navigator:nth-child(2),
+.floor_index .floor_group .floorlist navigator:nth-child(3) {
+  border-bottom: 10rpx solid #fff;
+}
+.floor_index .floor_group .floorlist navigator image {
+  width: 100%;
+  height: 100%;
+}
